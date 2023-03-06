@@ -1,8 +1,9 @@
+require('dotenv').config();
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express();
 
-const uri = "mongodb+srv://iianuragii:Anuragkohli123@nodeproject1.iyxuhsf.mongodb.net/?retryWrites=true&w=majority"
+const uri = process.env.SECRET_KEY
 async function connect(){
     try{
         await mongoose.connect(uri);
